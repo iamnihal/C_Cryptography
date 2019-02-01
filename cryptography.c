@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
-#include<unistd.h>
 #define MAX 100 
 int menu();
 int encrypt();
@@ -14,7 +13,7 @@ int main()
 	return 0;
 }
 
-int menu()
+int menu()								//Menu
 {
 	int choice;
 	char choice2,choice3;
@@ -55,7 +54,7 @@ int menu()
 	return 0;
 }
 
-int encrypt()
+int encrypt()								//Data Encryption
 {
 	char enc_mes[100];
 	int i;
@@ -69,7 +68,7 @@ int encrypt()
 	return 0;
 }
 
-int decrypt()
+int decrypt()								//Data Decryption
 {
 	char dec_mes[100];
 	int i;
@@ -83,13 +82,13 @@ int decrypt()
 	return 0;
 }
 
-int cleaner()
+int cleaner()								//Terminal Cleaning
 {
 	system("clear");
 	return 0;
 }
 
-int whatiscrypt()
+int whatiscrypt()							//Info
 {
 	printf("\nCryptography involves creating written or generated codes that allow information to be kept secret. Cryptography converts data into a format that is unreadable for an unauthorized user, allowing it to be transmitted without unauthorized entities decoding it back into a readable format, thus compromising the data.Information security uses cryptography on several levels. The information cannot be read without a key to decrypt it. The information maintains its integrity during transit and while being stored. Cryptography also aids in nonrepudiation. This means that the sender and the delivery of a message can be verified.Cryptography is also known as cryptology");
 return 0;
