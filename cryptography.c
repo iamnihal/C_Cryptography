@@ -1,12 +1,14 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
-#define MAX 100 
+#define MAX 100
 int menu();
 int encrypt();
 int decrypt();
 int cleaner();
 int whatiscrypt();
+int file_operation();
+char dec_mes[100];
 int main()
 {
 	menu();
@@ -37,12 +39,12 @@ int menu()								//Menu
 	exit(0);
 	else
 	printf("\nNice Shot");
-	printf("\n\nDo you want to clear this messy screen? (Y/N)");
+	printf("\nDo you want to clear this messy screen? (Y/N)");
 	scanf("%c",&choice2);
 	getchar();
 	if((choice2=='Y') || (choice2=='y'))
 	cleaner();
-	printf("\n\nDo you want to play this game again? (Y/N)");
+	printf("\nDo you want to play this game again? (Y/N)");
 	scanf("%c",&choice3);
 	getchar();
 	if((choice3=='Y') || (choice3=='y'))
@@ -70,7 +72,7 @@ int encrypt()								//Data Encryption
 
 int decrypt()								//Data Decryption
 {
-	char dec_mes[100];
+	char choice4;
 	int i;
 	printf("\nEnter your encrypted message:- ");
 	fgets(dec_mes,MAX,stdin);
@@ -79,6 +81,10 @@ int decrypt()								//Data Decryption
 	{
 		printf("%c",--dec_mes[i]);
 	}
+	printf("\n\nDo you want to store your decrypted message? (Y/N)");
+	scanf("%c",&choice4);
+	if(choice4=='y')
+	file_operation();
 	return 0;
 }
 
@@ -90,8 +96,21 @@ int cleaner()								//Terminal Cleaning
 
 int whatiscrypt()							//Info
 {
-	printf("\nCryptography involves creating written or generated codes that allow information to be kept secret. Cryptography converts data into a format that is unreadable for an unauthorized user, allowing it to be transmitted without unauthorized entities decoding it back into a readable format, thus compromising the data.Information security uses cryptography on several levels. The information cannot be read without a key to decrypt it. The information maintains its integrity during transit and while being stored. Cryptography also aids in nonrepudiation. This means that the sender and the delivery of a message can be verified.Cryptography is also known as cryptology");
+	printf("\nCryptography involves creating written or generated codes that allow information to be kept secret. Cryptography converts data into a format that is unreadable for an unauthorized user, allowing it to be transmitted without unauthorized entities decoding it back into a readable format, thus compromising the data.Information security uses cryptography on several levels. The information cannot be read without a key to decrypt it. The information maintains its integrity during transit and while being stored. Cryptography also aids in nonrepudiation. This means that the sender and the delivery of a message can be verified.Cryptography is also known as cryptology\n");
 return 0;
 }
 
+int file_operation()
+{
+	FILE *fptr;
+	fptr = fopen("decrypt.txt","w");
+	if(fptr==NULL)
+	{
+		printf("\nError while file creating");
+		exit(1);
+	}
+	fprintf(fptr,"%s",dec_mes);
+	return 0;
 
+
+}
