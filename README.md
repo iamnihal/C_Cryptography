@@ -1,2 +1,2 @@
 # C_Cryptography
-A very simple and naive so called cryptography program written in C.
+A very simple cryptography program written in C. It uses the concept of Caesar Cipher technique which is one of the most simple and famous encryption systems in the world of Cryptography.
