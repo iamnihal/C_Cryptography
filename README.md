@@ -7,6 +7,6 @@ A very simple cryptography program written in C. It uses the concept of Caesar C
 ```
 $ git clone https://github.com/iamnihal/C_Cryptography.git
 $ cd C_Cryptography
-$ cc cryptography
-$ ./a.out cryptography
+$ cc cryptography.c
+$ ./a.out cryptography.c
 ```
