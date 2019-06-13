@@ -3,7 +3,7 @@ A very simple cryptography program written in C. It uses the concept of Caesar C
 
 ![PIC](Pic.png)
 
-How to run?
+##How to run?
 ```
 $ git clone https://github.com/iamnihal/C_Cryptography.git
 $ cd C_Cryptography
