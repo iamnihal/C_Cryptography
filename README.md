@@ -1,7 +1,15 @@
-# C_Cryptography
-A very simple cryptography program written in C. It uses the concept of Caesar Cipher technique which is one of the most simple and famous encryption system in the world of Cryptography.
+<h1 align="center">
+  <br>
+  <a href="https://github.com/iamnihal/C_Cryptography"><img src="https://raw.githubusercontent.com/iamnihal/C_Cryptography/master/Pic.png" alt="C Cryptography"></a>
+  <br>
+  C Cryptography
+  <br>
+</h1>
 
-![PIC](Pic.png)
+<h4 align="center">Cryptography program witten in C</h4>
+
+#### Intro
+A very simple cryptography program written in C. It uses the concept of Caesar Cipher technique which is one of the most simple and famous encryption system in the world of Cryptography.
 
 ## How to run?
 ```
